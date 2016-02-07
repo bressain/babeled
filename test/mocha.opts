@@ -1,0 +1,5 @@
+--require test/babel-register.js
+--require chai
+--require sinon-chai
+--require test/assertions.js
+--reporter nyan

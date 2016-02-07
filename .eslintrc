@@ -1,0 +1,10 @@
+{
+  "env": {
+    "mocha": true
+  },
+  "extends": [ "standard" ],
+  "parser": "babel-eslint",
+  "rules": {
+    "curly": 0
+  }
+}
