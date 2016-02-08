@@ -1,4 +1,5 @@
 export default {
+  devtool: 'source-map',
   entry: [
     'babel-polyfill',  // initialize babel/es6 environment first
     './lib/index.js'
