@@ -2,17 +2,17 @@
   "name": "babeled",
   "version": "1.0.0",
   "description": "Template for doing simple javascript things but with newer javascript syntax",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/bressain/babled.git"
   },
   "scripts": {
-    "build": "rm -rf ./dist && webpack -p",
-    "start": "webpack",
-    "test": "mocha 'lib/**/*.spec.js'",
-    "test-watch": "mocha 'lib/**/*.spec.js' --watch",
-    "lint": "eslint lib/"
+    "build": "rm -rf ./build && mkdir ./build && babel src -s -o build/bundle.js",
+    "start": "nodemon -r babel-register src",
+    "test": "mocha 'src/**/*.spec.js'",
+    "test:watch": "mocha 'src/**/*.spec.js' --watch",
+    "lint": "eslint src/"
   },
   "author": "Bressain Dinkelman",
   "license": "ISC",
@@ -20,7 +20,6 @@
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.1",
-    "babel-loader": "^6.2.8",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-polyfill": "^6.16.0",
     "babel-preset-es2015": "^6.18.0",
@@ -31,9 +30,9 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
     "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
     "sinon": "^1.17.6",
-    "sinon-chai": "^2.8.0",
-    "webpack": "^1.13.3"
+    "sinon-chai": "^2.8.0"
   },
   "dependencies": {}
 }
