@@ -1,9 +1,3 @@
 # Babeled
 
-Jumping off point for transpiled javascript
-
-## Using:
-
-* Babel
-* Webpack
-* Mocha/Chai
+Jumping off point for transpiled javascript using Babel
